@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:go_router/go_router.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widget_formato/config/menu/menu_items.dart';
-import 'package:widget_formato/presentation/screens/buttons/buttons_screen.dart';
+//import 'package:widget_formato/presentation/screens/buttons/buttons_screen.dart';
+//import 'package:widget_formato/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_screen';
@@ -52,13 +53,11 @@ class _CustomLisTile extends StatelessWidget{
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
       onTap: () {
-        //context.push(menuItem.link);
-        //Navigator.pushNamed(context, menuItem.link);
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ButtonScreen()));
+        context.push(menuItem.link);
       },
     );
   }
 }
 
 
-//go_router 
+//go_router installar

@@ -32,7 +32,7 @@ class _CardsView extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          ...cards.map(
+          ...cards.map(                                                                 //investigar que la funcion de los ...
             (card) => _CardType1( elevation: card['elevation'], label: card['label']),
             ),
           ...cards.map(
@@ -185,7 +185,7 @@ class _CardType4 extends StatelessWidget {
       child: Stack(
         children: [
           Image.network(
-            'https://picsum.photos/id/${elevation.toInt()}/600/350',
+            'https://picsum.photos/id/${elevation.toInt() }/600/350',
             height: 350,
             fit: BoxFit.cover,
           ),
@@ -207,3 +207,6 @@ class _CardType4 extends StatelessWidget {
     );
   }
 }
+
+
+//https://helloyogita.medium.com/dart-programming-triple-dot-spread-operator-f57fa39e12b0#:~:text=This%20operator%20is%20a%20replacement,to%20add%20to%20our%20list.
