@@ -24,7 +24,4 @@ class MyApp extends StatelessWidget {
 1navegacion entre pantallas
 2nuevos widget
  a.botones y sus variantes
- b.botones personalizados
-
- c.
- */
+ b.botones personalizad*/ 

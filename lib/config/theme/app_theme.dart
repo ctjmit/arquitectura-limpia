@@ -14,9 +14,11 @@ const colorList = <Color>[
 
 class Apptheme {
   final int selectedColor;
+  final bool isDarkmode;  
 
   Apptheme({
-    this.selectedColor= 0
+    this.selectedColor= 0,
+    this.isDarkmode = false,
   }): assert( selectedColor >= 0, 'Seleted color must be greater then 0'),
       assert( selectedColor < colorList.length,
       'Selected color must be less or equal than ${ colorList.length -1 }');
@@ -26,7 +28,16 @@ class Apptheme {
     colorSchemeSeed: colorList[ selectedColor ],
     appBarTheme: const AppBarTheme(
       centerTitle: false
-    )
+    ),
   );
+
+  Apptheme copyWith({
+    int? selectedColor,
+    bool? isDarkmode
+  }) => Apptheme(
+    selectedColor: selectedColor ?? this.selectedColor,
+    isDarkmode: isDarkmode ?? this.isDarkmode,
+  );
+
 }
 //creando paletas de colores que se utilizaran en la app
